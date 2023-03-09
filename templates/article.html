@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="”viewport”" content="width=device-width, initial-scale=1.0" />
+    <title>鐵花精選文章</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
+    <!-- My own style -->
+    <link href="../static/css/article.css" rel="stylesheet" />
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TFWW8F7');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFWW8F7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <a href="./regulation.html"></a>
+
+    <div class="nav" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <div class="uk-text-center" uk-grid>
+            <div class="navdiv uk-width-1-2" id="nav1">尋 寶 指 南</div>
+            <div class="navdiv uk-width-1-2" id="nav2">鐵花精選文章</div>
+        </div>
+
+        <div uk-grid>
+            <div class="line uk-width-1-2" id="line1"></div>
+            <div class="line uk-width-1-2" id="line2"></div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="art">
+            <a href="https://spot.line.me/pocketDetail/mbqV70dZxg?utm_source=LINESPOTCampaign&utm_medium=Pocketlist&utm_campaign=TaitungTiehua">
+                <div class="art-img text-center" id="art-1"
+                    style="background-image: url('../static/img/article/spot-1.png');"></div>
+            </a>
+            <a href="https://spot.line.me/pocketDetail/DbWoK9bWdN?utm_source=LINESPOTCampaign&utm_medium=Pocketlist&utm_campaign=TaitungTiehua">
+                <div class="art-img text-center" id="art-2"
+                    style="background-image: url('../static/img/article/spot-2.png');"></div>
+            </a>
+            <a href="https://spot.line.me/pocketDetail/DbWoK8oWdN?utm_source=LINESPOTCampaign&utm_medium=Pocketlist&utm_campaign=TaitungTiehua">
+                <div class="art-img text-center" id="art-3"
+                    style="background-image: url('../static/img/article/spot-3.png');"></div>
+            </a>
+            
+        </div>
+    </div>
+
+
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+    <!-- LIFF -->
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <!-- JS -->
+    <script>
+        $(document).ready(function () {
+            $(".nav").on('click', '#nav1', () => { window.location = "https://linefresh-bot.herokuapp.com/liff/regulation"; });
+
+            // $(".nav").on('click', '#nav1', function () {
+            //     // 切換頁面
+            //     $("a")[0].click();
+            // });
+
+        });
+    </script>
+
+
+</body>
+
+</html>

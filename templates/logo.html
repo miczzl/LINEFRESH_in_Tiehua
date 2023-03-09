@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鐵花尋寶趣</title>
+    <!-- Digital Clock Font CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
+    <!-- My own style -->
+    <link rel="stylesheet" href="../static/css/logo.css" />
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TFWW8F7');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFWW8F7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="quote">
+        <img src="../static/img/logo_quote.png">
+    </div>
+    <!-- 尋寶圖 -->
+    <div class="main uk-background-cover" id="main" style="background-image: url(../static/img/main.png);">
+        <button class="uk-button uk-button-default task_btn" uk-toggle="#task_popup">任務說明</button>
+        <div class="count" style="font-family: 'Orbitron', sans-serif;" id="logo_count">00</div>
+        <img src="../static/img/baby.png" alt="" class="baby">
+    </div>
+    <!-- 任務說明 -->
+    <div id="task_popup" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" id="task_text">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <h3>任務說明</h3>
+            <p>
+                在「鐵花商圈」找到下列合作店家的商圈 LOGO ，並到店家掃描專屬 QRcode 後，即完成任務並獲得一次轉盤機會。
+            </p>
+            <p>鐵花商圈 LOGO 示意圖：</p>
+            <img src="../static/img/tiehua_logo.jpg" alt="">
+        </div>
+    </div>
+    <div class="uk-alert-success" uk-alert>
+        <p>點擊店家可查看該店家 LINE 熱點喔！</p>
+    </div>
+    <!-- 店家列表 -->
+    <div class="tabs">
+        <!-- 尚未完成尋寶的店家 -->
+        <div class="tab">
+            <input type="checkbox" id="chck0">
+            <label class="tab-label" for="chck0" id="label0">尚未完成尋寶的店家 ()</label>
+            <div class="tab-content uk-child-width-1-4" id="c0" uk-grid></div>
+        </div>
+        <!-- 已完成尋寶的店家 -->
+        <div class="tab">
+            <input type="checkbox" id="chck1">
+            <label class="tab-label" for="chck1" id="label1">已完成尋寶的店家 ()</label>
+            <div class="tab-content uk-child-width-1-4" id="c1" uk-grid></div>
+        </div>
+    </div>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <!-- JS -->
+    <script>
+        $(document).ready(function () {
+            let baby_rotate = 10;
+            let endpoint = vw(70);
+            var animate = setInterval(function () {
+                var nowLeft = parseInt($('.baby').css('left').slice(0, -2));
+                $('.baby').css('left', nowLeft + 20 + 'px');
+                baby_rotate = -(baby_rotate);
+                $('.baby').css('transform', 'rotate(' + baby_rotate + 'deg)');
+                if (nowLeft + 20 >= endpoint) {
+                    $('.baby').css('left', '0px');
+                }
+            }, 1000);
+        });
+
+        function vw(v) {
+            var w = document.documentElement.clientWidth;
+            return (v * w) / 100;
+        }
+    </script>
+    <script src="../static/js/logo.js"></script>
+</body>
+
+</html>

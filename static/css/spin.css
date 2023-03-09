@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+*{
+	box-sizing:border-box;
+}
+body {
+	font-family: 'Noto Sans TC',sans-serif !important;
+	background-image: url("../../static/img/background.jpg");
+	background-size: 100%;
+}
+
+.bodyy {
+	margin:0;
+	padding:0; 
+	/* height: 100vh; */
+	
+}
+
+
+/* nav bar */
+nav {
+	opacity: 0.8;
+	z-index: 100;
+	height: 5vh;
+	margin-top: 0;
+	background-color: #b7e1e4;
+}
+
+nav div {
+	margin: 0;
+  	transition: .5s;
+	text-align: center;
+	
+	height: 100%;
+}
+
+.line{
+	margin: 0;
+	background-color: #b7e1e4;
+	transition: .5s;
+	height: 0.5vh;
+	z-index: 90;
+}
+
+#line1 {
+	background-color: #3d6b6e;
+}
+
+.navdiv {
+	color: #3d6b6e;
+	font-size: 2vh;
+	font-weight: bolder;
+}
+
+#nav2 {
+	color:#89b3b6;
+}
+
+/* title + description */
+.title {
+	padding-top: 0;
+	margin-bottom: 0;
+	z-index: 0;
+}
+
+img {
+	width: 60vw;
+}
+
+.description {
+	color: #fffbf0;
+	font-weight: bolder;
+	
+}
+
+.desc-h1 {
+	font-size: 2vh;
+	line-height: 1;
+}
+
+.btn-link {
+	font-size: 2vh;
+	color: white;
+	font-weight: bolder;
+	height: 3.5vh;
+}
+
+#coupon_desc {
+	margin-top: 4vh;
+	font-size: 2.8vh;
+}
+
+.modal-content {
+	width: 80vw;
+}
+
+.modal-dialog {
+	margin-inline: 10vw;
+	margin-top: 10vh;
+	font-size: 2vh;
+}
+
+
+.modal-title {
+	font-size: 3vh;
+}
+
+.modal-body {
+	word-wrap: break-word;
+	padding-inline: 5vw;
+	padding-block: 2vh;
+}
+
+/* result pop-up div */
+.modal-dialog-centered {
+	width: 70vw;
+	margin-inline: 15vw;
+	padding-top: 15vh;
+	
+}
+
+.modal-body1 {
+	padding-top: 2vh;
+	
+}
+
+.modalLabel {
+	margin-block: 3vh;
+	color: #fffbf0;
+	font-size: 5vw;
+	font-weight: 800;
+	line-height: 1.5;
+}
+
+.modal-body1 img {
+	width: 80%;
+	padding-left: 0;
+}
+
+b {
+	color: #AA2244;
+}
+
+.btn-lg {
+	width: 20vw;
+	height: 8vw;
+	margin-right: 1vh;
+	margin-bottom: 1vh;
+	font-size: 4vw;
+	background-color: #7cb9be;
+	border: 0;
+	border-radius: 10px;
+}
+
+.modal-content1 {
+	height: max-content;
+	background-color: #f8c4c0;
+	border-radius: 80px;
+}
+
+.modal-header {
+	border-bottom-width: 0ch;
+}
+
+.modal-footer {
+	border-top-width: 0ch;
+}
+
+
+/* spin wheel */
+.body1 {
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	height: 55vh;
+	overflow:hidden;
+}
+
+
+.container1 {
+	width: 700px;
+	height: 700px;
+	background-color: #ccc;
+	border-radius:50%;
+	border:15px solid #dde;
+	position: relative;
+	overflow: hidden;
+	transition: 5s;
+}
+
+.container1 .one{
+	background-color: #A7C77F;
+	left:50%;
+}
+.container1 .two{
+	background-color: #FDD657;
+	transform: rotate(36deg);
+}
+.container1 .three{
+	background-color: #F7C078;
+	transform:rotate(72deg);
+}
+.container1 .four{
+	background-color: #A7C77F;
+	transform: rotate(108deg);
+}
+.container1 .five{
+	background-color: #FDD657;
+	transform: rotate(144deg);
+}
+.container1 .six{
+	background-color: #F7C078;
+	transform: rotate(180deg);
+}
+.container1 .seven{
+	background-color: #A7C77F;
+	transform: rotate(216deg);
+}
+.container1 .eight{
+	background-color: #FDD657;
+	transform: rotate(252deg);
+}
+.container1 .nine{
+	background-color: #F7C078;
+	transform: rotate(288deg);
+}
+.container1 .ten{
+	background-color: #FDD657;
+	transform: rotate(324deg);
+}
+
+.sector{
+	height: 50%;
+	width: 400px;
+	position: absolute;
+	/* 增加轉盤項目後要改這裡調整扇形大小！ */
+	clip-path: polygon(80% 0 , 50% 100% , 20% 0 );
+	transform:translateX(-50%);
+	transform-origin:bottom;
+	/* text-align:center;
+	display:flex;
+	align-items: center;
+	justify-content: center; */
+	/* font-size: 30px;
+	font-weight:bold;
+	font-family:sans-serif;
+	color:#fff; */
+	left:135px;
+}
+
+.img-div {
+	position: relative;
+	width: 400px;
+	height: 100%;
+}
+
+.img-div img {
+	position: absolute;
+	top: 15%;
+	left: 160px;
+	width: 80px;
+}
+
+.nine .img-div img {
+	left: 150px;
+}
+
+.arrow{
+	position: absolute;
+	z-index: 10;
+	top: 4vh;
+	left: 50%;
+	transform: translateX(-50%);
+	color:#fff;
+    font-size: 70px;
+}
+
+#spin{
+	position: absolute;
+    top: 50%;
+	left: 50%;
+	/* transform:translate(-50%,-50%); */
+	z-index: 10;
+	background-color: #e2e2e2;
+	text-transform: uppercase;
+	border: 8px solid #fff;
+	font-weight: bold;
+	font-size: 50px;
+	color:#a2a2a2;
+	width: 170px;
+	height: 170px;
+	/*font-family: sans-serif;*/
+	border-radius:50%;
+	cursor: pointer;
+	outline: none;
+	letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

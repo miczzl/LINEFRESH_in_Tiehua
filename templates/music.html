@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鐵花好音樂</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
+    <!-- My own style -->
+    <link rel="stylesheet" href="../static/css/music.css" />
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TFWW8F7');
+    </script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFWW8F7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- <a href="./live.html"></a>
+    <a href="./singer/singer-1.html"></a>
+    <a href="./singer/singer-2.html"></a>
+    <a href="./singer/singer-3.html"></a>
+    <a href="./singer/singer-4.html"></a>
+    <a href="./singer/singer-5.html"></a>
+    <a href="./singer/singer-6.html"></a>
+    <a href="./singer/singer-7.html"></a>
+    <a href="./singer/singer-8.html"></a>
+    <a href="./singer/singer-9.html"></a>
+    <a href="./singer/singer-10.html"></a> -->
+    <div class="nav" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <div class="uk-text-center" uk-grid>
+            <div class="navdiv uk-width-1-2" id="nav1">鐵 花 歌 手</div>
+            <div class="navdiv uk-width-1-2" id="nav2">MUSIC LIVE 直播</div>
+        </div>
+
+        <div uk-grid>
+            <div class="line uk-width-1-2" id="line1"></div>
+            <div class="line uk-width-1-2" id="line2"></div>
+        </div>
+    </div>
+
+    <div class="uk-flex uk-flex-center">
+        <div class="task">
+            <h4 class="task-title uk-position-top-center">任務進度</h4>
+            <button class="uk-button uk-button-link task_btn" uk-toggle="#task_popup">
+                <u>點我說明</u>
+            </button>
+            <div class="uk-child-width-expand uk-grid-collapse icons" uk-grid></div>
+            <progress id="js-progressbar" class="uk-progress progress-black" value="0" max="100"></progress>
+            <small id="progress">0%</small>
+        </div>
+    </div>
+
+    <div class="uk-flex uk-flex-center">
+        <button class="uk-button uk-button-default share-btn uk-border-rounded" id="share_song_list">分享歌單</button>
+    </div>
+
+    <!-- pop-up div for task's description -->
+    <div id="task_popup" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" id="task_text">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <h3>任務說明</h3>
+            <p>
+                在「鐵花歌手」頁面中，每次點擊查看、欣賞不同的兩位歌手的作品即完成任務，獲得一次轉盤抽獎機會。快來尋找專屬於你的音樂寶藏吧！
+            </p>
+        </div>
+    </div>
+
+    <div class="uk-child-width-1-2 display_singers" uk-grid
+        uk-scrollspy="cls: uk-animation-fade; target: div; delay: 200;">
+
+        <div class="uk-text-center singer" id="singer-1">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/1-02.0樂團.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-1">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="1"
+                                id="singer_btn_1"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="singer_name">2.0 樂團</b>
+        </div>
+
+        <div class="uk-text-center singer" id="singer-2">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/2-0Savulu&Laway.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-2">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="2"
+                                id="singer_btn_2"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="singer_name">Savulu & Laway</b>
+        </div>
+
+        <div class="uk-text-center singer" id="singer-3">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/3-0安懂.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-3">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="3"
+                                id="singer_btn_3"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="singer_name">安懂</b>
+        </div>
+
+        <div class="uk-text-center singer" id="singer-4">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/4-0嵐馨樂團.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-4">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="4"
+                                id="singer_btn_4"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="singer_name">嵐馨樂團</b>
+        </div>
+
+        <div class="uk-text-center singer" id="singer-5">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/5-0智偉葛格.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-5">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="5"
+                                id="singer_btn_5"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="singer_name">智偉葛格</b>
+        </div>
+
+        <div class="uk-text-center singer" id="singer-6">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/6-0KASILAW.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-6">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="6"
+                                id="singer_btn_6"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <b class="singer_name">KASIRAW 鹹豬肉樂團</b>
+        </div>
+
+        <div class="uk-text-center singer" id="singer-7">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/7-0高嘉祺.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-7">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="7"
+                                id="singer_btn_7"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="singer_name">高嘉祺</b>
+        </div>
+
+        <div class="uk-text-center singer" id="singer-8">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/8-0饒棣華.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-8">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="8"
+                                id="singer_btn_8"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <b class="singer_name">饒棣華</b>
+        </div>
+
+        <div class="uk-text-center singer" id="singer-9">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/9-0發熱帶樂團.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-9">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="9"
+                                id="singer_btn_9"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="singer_name">發熱帶樂團</b>
+        </div>
+
+        <div class="uk-text-center singer" id="singer-10">
+            <div class="uk-card uk-card-default">
+                <div class="card-body">
+                    <img src="../static/img/singer/10-0旮勒思南.jpg" alt="" loading="lazy" />
+                    <div class="singer_hovered" id="hover-10">
+                        <div class="uk-overlay-primary uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-center uk-light btndiv">
+                            <button class="uk-button uk-button-default uk-button-small" value="10"
+                                id="singer_btn_10"><b>查看<br>介紹</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="singer_name">旮勒思南樂團</b>
+        </div>
+
+    </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- LIFF -->
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <!-- JS -->
+    <script>
+
+        $(document).ready(function () {
+            //點擊其他地方恢復點擊前模樣
+            $('body').click(function () {
+                $('.singer_hovered').hide("slow");
+            });
+
+            //點擊歌手呈現反黑畫面
+            $('.display_singers').find('.singer').click(function (e) {
+                switch ($(this).attr('id')) {
+                    case "singer-1":
+                        toggle_hover("#hover-1");
+                        break;
+                    case "singer-2":
+                        toggle_hover("#hover-2");
+                        break;
+                    case "singer-3":
+                        toggle_hover("#hover-3");
+                        break;
+                    case "singer-4":
+                        toggle_hover("#hover-4");
+                        break;
+                    case "singer-5":
+                        toggle_hover("#hover-5");
+                        break;
+                    case "singer-6":
+                        toggle_hover("#hover-6");
+                        break;
+                    case "singer-7":
+                        toggle_hover("#hover-7");
+                        break;
+                    case "singer-8":
+                        toggle_hover("#hover-8");
+                        break;
+                    case "singer-9":
+                        toggle_hover("#hover-9");
+                        break;
+                    case "singer-10":
+                        toggle_hover("#hover-10");
+                        break;
+                }
+                e = e || event;
+                stopFunc(e);
+            });
+
+            //點擊歌手之反黑畫面中的按鈕進入介紹頁
+            // $('.btndiv').find('.uk-button-small').click(function () {
+            //     switch ($(this).attr('value')) {
+            //         case "1":
+            //             $("a")[1].click();
+            //             break;
+            //         case "2":
+            //             $("a")[2].click();
+            //             break;
+            //         case "3":
+            //             $("a")[3].click();
+            //             break;
+            //         case "4":
+            //             $("a")[4].click();
+            //             break;
+            //         case "5":
+            //             $("a")[5].click();
+            //             break;
+            //         case "6":
+            //             $("a")[6].click();
+            //             break;
+            //         case "7":
+            //             $("a")[7].click();
+            //             break;
+            //         case "8":
+            //             $("a")[8].click();
+            //             break;
+            //         case "9":
+            //             $("a")[9].click();
+            //             break;
+            //         case "10":
+            //             $("a")[10].click();
+            //             break;
+            //     }
+            // });
+
+            $('.share-btn').click(function () {
+                $('.share-btn').css('background-color', '#b7e1e4');
+                $('.share-btn').css('color', '#3d6b6e');
+            });
+        });
+
+        function stopFunc(e) {
+            e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+        }
+
+        function toggle_hover(id) {
+            if ($(id).css('display') == 'none') {
+                $(id).show(0);
+            } else {
+                $('.singer_hovered').hide("slow");
+            }
+        }
+    </script>
+    <script src="../static/js/music.js"></script>
+</body>
+
+</html>

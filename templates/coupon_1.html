@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的優惠券錢包</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
+    <!-- My own style -->
+    <link rel="stylesheet" href="../static/css/coupon-1.css" />
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TFWW8F7');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFWW8F7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="main uk-background-cover uk-card uk-card-default" id="main">
+        <div class="uk-card-media-top uk-flex uk-flex-center">
+            <img src="../static/img/shop_logo/GAYA.png" alt="">
+        </div>
+        <div class="uk-card-body uk-text-center" id="desc">
+            <h4 class="uk-card-title">
+                <p>購夠台東</p>全品項 9.5 折優惠券
+            </h4>
+            <p></p>
+            <p>適用店家：臺東縣農產股份有限公司 - 購夠台東</p>
+            <p>使用效期：2022/7/15 ~ 2022/8/7</p>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <div class="tab">
+            <input type="checkbox" id="steps">
+            <label class="tab-label" for="steps">優惠券使用方法</label>
+            <div class="tab-content">
+                <div class="tab-words">
+                    <p>步驟一：<br>在音 JOY 鐵花慢活祭 LINE 官方帳號中點選「優惠轉盤」＞ 點擊右上角「我的優惠券錢包」＞ 選擇欲使用的優惠券</p>
+                    <p>步驟二：<br>前往店家兌換優惠，並在結帳時與店家出示此優惠券畫面</p>
+                    <p>步驟三：<br>交由店家按下兌換按鈕，進行核銷</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input type="checkbox" id="notice">
+            <label class="tab-label" for="notice">注意事項</label>
+            <div class="tab-content">
+                <div class="tab-words" id="notice-text">
+                    <p>1. 中獎者需出示此手機優惠券至青澤指定分店【正氣一店、正氣二店、鐵花店】由工作人員點選後始得兌換，翻拍、截圖或影印等傳送予他人方式無效。</p>
+                    <p>2. 兌換期間：2022/7/15-2022/8/7 兌完為止。</p>
+                    <p>3. 請勿直接點選優惠券的兌換按鈕，點選視同兌換，若有誤點情況恕不補發。</p>
+                    <p>4. 實品以現場為主，無法要求更換或兌換現金。</p>
+                    <p>5. 兌換優惠限各分店前 100 名用戶（《脆脆捲捲》乙份 或《琪瑪酥》乙份各
+                        100名）兌換時使用，依青澤指定分店工作人員確認兌換順序為準，兌完為止。若出現無法結單、兌換之警語，表示已兌換達上限。</p>
+                    <p>6. 如有任何變動與未盡事宜請依官網或現場公告為準，音 JOY 鐵花尋寶祭與青澤琪瑪酥保留本券使用最後修改權，與最終獎項說明及領獎注意事項之權利。</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="redeem" uk-sticky="position: bottom">
+        <button class="uk-button uk-button-default" id="redeem-btn">兌&emsp;換</button>
+    </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+
+            $('#redeem-btn').click(function () {
+
+                var confirm = window.confirm('確定兌換此優惠券？（請交由店員核銷）');
+
+                if (confirm) {
+                    alert('你按了確定按鈕');
+                } else {
+                    alert('你按了取消按鈕');
+                }
+            });
+
+
+        });
+
+        function vh(v) {
+            var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+            return (v * h) / 100;
+        }
+
+        function vw(v) {
+            // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var w = document.documentElement.clientWidth;
+            return (v * w) / 100;
+        }
+
+
+    </script> -->
+    <script src="../static/js/coupon_1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="”viewport”" content="width=device-width, initial-scale=1.0" />
+    <title>優惠轉盤</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <link href="../static/css/spin.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TFWW8F7');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="bodyy">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFWW8F7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar navbar-light">
+        <div class="navdiv pt-2 col-6" id="nav1">優惠轉盤</div>
+        <div class="navdiv pt-2 col-6" id="nav2">我的優惠券錢包</div>
+        <div class="col-6 line" id="line1"> </div>
+        <div class="col-6 line" id="line2"> </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="title text-center">
+        <img src="../static/img/spin/title.png" alt="鐵花抽抽樂" class="img-fluid mt-5">
+    </div>
+    <div class="description text-center">
+        <h1 class="desc-h1">完成一項任務，即可獲得抽獎機會！</h1>
+        <div class="d-grid col-3 mx-auto pt-1">
+            <button class="btn btn-link" type="button" id="desc_btn" data-bs-toggle="modal"
+                data-bs-target="#descModal">遊戲說明</button>
+        </div>
+        <h1 class="pt-5" id="coupon_desc">您現在有 <b id="num_of_coupon"> </b> 張抽獎券</h1>
+    </div>
+
+    <!-- 任務說明 -->
+    <div class="modal fade" id="descModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content ps-3 py-3">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">遊戲說明</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    在圖文選單中點選「任務列表」，完成其中任一項任務即可獲得轉盤機會一次。得到獎勵後可至「我的優惠券錢包」中查看並使用。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 抽獎結果 -->
+    <div class="modal modal-dialog-centered" id="modal" style="display: none;">
+        <div class="modal-content modal-content1">
+            <div class="modal-header"></div>
+            <div class="modal-body modal-body1 text-center">
+                <!-- <h1 class="modalLabel" id="result_coupon_name">恭喜你抽中＿＿＿＿＿＿！</h1>
+                <h1 class="modalLabel" id="remain_raffle_num">還剩餘 <b> </b> 次抽獎機會</h1> -->
+                
+                <img src="../static/img/spin/congrats.png" alt="">
+                <h3 class="modalLabel" id="result_coupon_name">「獎品名稱」</h3>
+                <h3 class="modalLabel" id="remain_raffle_num">還剩餘 <b>5</b> 次抽獎機會</h3>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary btn-lg" id="modal_btn">關閉</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 轉盤 -->
+    <div class="body1 d-flex align-items-center position-relative">
+
+        <button id="spin" class="position-absolute top-50 start-50 translate-middle"><label>抽獎</label></button>
+        <div class="position-absolute top-50 start-50 translate-middle"></div>
+        <span class="arrow">▼</span>
+
+        <div class="container1">
+            <div class="one sector"><div class="img-div"><img src="../static/img/spin/dollar.png" alt=""></div></div>
+            <div class="two sector"><div class="img-div"><img src="../static/img/spin/discount.png" alt=""></div></div>
+            <div class="three sector"><div class="img-div"><img src="../static/img/spin/homepod.png" alt=""></div></div>
+            <div class="four sector"><div class="img-div"><img src="../static/img/spin/dollar.png" alt=""></div></div>
+            <div class="five sector"><div class="img-div"><img src="../static/img/spin/discount.png" alt=""></div></div>
+            <div class="six sector"><div class="img-div"><img src="../static/img/spin/concert-ticket.png" alt=""></div></div>
+            <div class="seven sector"><div class="img-div"><img src="../static/img/spin/dollar.png" alt=""></div></div>
+            <div class="eight sector"><div class="img-div"><img src="../static/img/spin/discount.png" alt=""></div></div>
+            <div class="nine sector"><div class="img-div"><img src="../static/img/spin/gift-bag.png" alt=""></div></div>
+            <div class="ten sector"><div class="img-div"><img src="../static/img/spin/discount.png" alt=""></div></div>
+        </div>
+    </div>
+
+    <script src="../static/js/spin.js"></script>
+
+</body>
+
+</html>

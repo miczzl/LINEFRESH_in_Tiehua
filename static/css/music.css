@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
+body {
+	font-family: 'Noto Sans TC',sans-serif !important;
+    margin:0;
+	/* margin-right: -5vw; */
+	padding-bottom: 20vh;
+    background-color: #3d6b6e;
+	width: 100vw;
+}
+
+.nav {
+	background-color: #89a4a6;
+	width: 100vw;
+	height: 4.5vh;
+	margin: 0;
+	padding: 0;
+}
+
+
+.nav .uk-grid-margin,.nav .uk-grid+.uk-grid,.nav .uk-grid>.uk-grid-margin {
+	margin-top: 0;
+}
+
+.line{
+	margin-top: 0;
+	background-color: #3d6b6e;
+	transition: .5s;
+	height: 0.5vh;
+
+}
+
+#line1 {
+	background-color: #e7eded;
+	width: 50%;
+}
+
+#line2 {
+	width: 50%;
+	background-color: #89a4a6;
+}
+
+.navdiv {
+	color: white;
+	font-size: 2vh;
+	background-color: #89a4a6;
+	margin: 0;
+  	transition: .5s;
+	padding-block: 1vh;
+	height: 5vh;
+}
+
+#nav1 {
+	/* width: 40%; */
+}
+
+#nav2 {
+	color:#607374;
+	/* width: 40%; */
+}
+
+.task {
+	background-color: #e8e6e6;
+	border-radius: 15px;
+	width: 70vw;
+	height: 10vh;
+	z-index: 10;
+	margin-top: 5vh;
+	position: relative;
+}
+
+.task-title {
+	position: absolute;
+	top: 1vh;
+}
+
+/* task progress img */
+.uk-object-cover {
+	position: absolute;
+	top: 0;
+}
+
+.task_btn {
+	position: absolute;
+	top: 1.7vh;
+	right: 10vw;
+	color:#3d6b6e;
+	font-size: 12px;
+}
+
+#task_text {
+	width: 80vw;
+	top: -20%;
+}
+
+.uk-progress {
+	position: absolute;
+	top: 5vh;
+	left: 8vw;
+	width: 70%;
+	height: 1vh;
+	padding: 0;
+	margin: 1vh 0 0 0;
+	z-index: 100;
+}
+
+.uk-progress.progress-black::-webkit-progress-value {
+	background-color: black;
+} 
+.uk-progress.progress-black::-moz-progress-bar {
+	background-color: black;
+}
+.uk-progress.progress-black::-ms-fill {
+	background-color: black;
+}
+
+small {
+	position: absolute;
+	top: 5vh;
+	left: 60vw;
+	color: black;
+}
+
+.share-btn {
+	margin-top: 2vh;
+	background-color: #b7e1e4;
+	color: #3d6b6e;
+	border: 0;
+	font-weight: 500;
+}
+
+.display_singers {
+	margin-top: 6vh;
+	margin-left: 1vw;
+	margin-right: 4vw;
+	padding-right: 4vw;
+}
+
+.uk-card {
+	margin-bottom: 1vh;
+}
+
+.singer_name {
+	color: white;
+}
+
+.singer_hovered {
+	display: none;
+}
+
+.uk-button-small {
+	z-index: 100;
+	border: 0;
+}

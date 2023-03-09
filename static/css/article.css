@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+body {
+  font-family: 'Noto Sans TC',sans-serif !important;
+  margin: 0;
+  /* margin-right: -5vw; */
+  background-color: #7ac7cd;
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 10vh;
+}
+
+.nav {
+	background-color: #b7e1e4;
+	width: 100vw;
+	height: 4.5vh;
+	margin: 0;
+	padding: 0;
+}
+
+.navdiv {
+	color: #3B676A;
+	font-size: 2vh;
+	font-weight: 900;
+	background-color: #b7e1e4;
+	margin: 0;
+    transition: .5s;
+	padding-block: 1vh;
+	height: 5vh;
+}
+
+#nav1 {
+    color:#86B0B3;
+	/* width: 40%; */
+}
+
+#nav2 {
+	/* width: 40%; */
+}
+
+
+.nav .uk-grid-margin,.nav .uk-grid+.uk-grid,.nav .uk-grid>.uk-grid-margin {
+	margin-top: 0;
+}
+
+.line{
+	margin-top: 0;
+	background-color: #3B676A;
+	transition: .5s;
+	height: 0.5vh;
+
+}
+
+#line1 {
+	background-color: #86B0B3;
+	width: 50%;
+}
+
+#line2 {
+	width: 50%;
+    background-color: #3B676A;
+}
+
+
+.main {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: max-content;
+}
+
+.art-img {
+    background-size: cover;
+    width: 80vw;
+    height: calc(80vw * 0.444);
+}
+
+.art {
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.art a {
+    padding-bottom: 3vh;
+}

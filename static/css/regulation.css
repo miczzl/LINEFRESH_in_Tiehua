@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+body {
+  font-family: 'Noto Sans TC',sans-serif !important;
+  margin: 0;
+  /* margin-right: -5vw; */
+  background-color: #7ac7cd;
+  height: max(100vh, fit-content);
+  width: 100vw;
+  padding-bottom: 10vh;
+}
+
+.nav {
+	background-color: #b7e1e4;
+	width: 100vw;
+	height: 4.5vh;
+	margin: 0;
+	padding: 0;
+}
+
+.navdiv {
+	color: #3B676A;
+	font-size: 2vh;
+  font-weight: 900;
+	background-color: #b7e1e4;
+	margin: 0;
+  transition: .5s;
+	padding-block: 1vh;
+	height: 5vh;
+}
+
+#nav1 {
+	/* width: 40%; */
+}
+
+#nav2 {
+	color:#86B0B3;
+	/* width: 40%; */
+}
+
+
+.nav .uk-grid-margin,.nav .uk-grid+.uk-grid,.nav .uk-grid>.uk-grid-margin {
+	margin-top: 0;
+}
+
+.line{
+	margin-top: 0;
+	background-color: #3B676A;
+	transition: .5s;
+	height: 0.5vh;
+
+}
+
+#line1 {
+	background-color: #3B676A;
+	width: 50%;
+}
+
+#line2 {
+	width: 50%;
+	background-color: #86B0B3;
+}
+
+
+
+.main {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 15vw;
+  width: 70vw;
+  height: 70vw;
+  border-radius: 8px;
+  background-color: #e4f5f5;
+}
+
+.red {
+  color: rgb(233, 68, 68);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* test Accordion*/
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  margin-left: 7.5vw;
+  border-radius: 8px;
+  width: 85vw;
+  color: #3b676a;
+  overflow: hidden;
+}
+
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #e4f5f5;
+  font-size: 4.5vw;
+  cursor: pointer;
+}
+
+p strong {
+  font-size: 4.55vw;
+}
+
+/* Icon */
+.tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  padding-inline: 1vw;
+  max-height: 0;
+  padding: 0 1em;
+  background: #e4f5f5;
+  transition: all 0.35s;
+  font-size: 4vw;
+}
+
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+input:checked + .tab-label {
+  background: #e4f5f5;
+}
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: fit-content;
+  padding: 1em;
+}
+
+.tab-words {
+  width: 90%;
+}
+
+/* To-top */
+.toTop-arrow {
+	width: 3rem;
+	height: 3rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.7;
+	background: #3b676a;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 2rem;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 23px;
+	height: 6px;
+	border-radius: 3px;
+	background: white;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}

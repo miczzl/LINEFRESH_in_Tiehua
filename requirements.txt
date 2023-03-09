@@ -1,0 +1,6 @@
+Flask
+Flask-SQLAlchemy
+gunicorn
+line-bot-sdk
+psycopg2
+beautifulsoup4
