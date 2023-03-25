@@ -31,14 +31,14 @@
 每瀏覽兩位歌手介紹即完成一次任務。  
   
 * 尋寶指南  
-![images](images/articals.png)  
+![images](images/articles.png)  
 記載音 JOY 鐵花尋寶祭所有相關規則及 LINE Spot、LINE Travel 上相關文章。  
   
 * 鐵花情報站  
 連結 LINE Spot 活動主頁面。
 
 ## 技術架構
-![images](images/structure.jpg)  
+![images](images/structure.png)  
   
 ## 相關報導
 * [Youtube 紀錄影片](https://youtu.be/XSDIq7LQvbw)
