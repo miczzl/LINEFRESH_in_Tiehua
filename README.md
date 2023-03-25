@@ -38,7 +38,7 @@
 連結 LINE Spot 活動主頁面。
 
 ## 技術架構
-![images](images/structure.png)  
+![images](images/drawio.png)  
   
 ## 相關報導
 * [Youtube 紀錄影片](https://youtu.be/XSDIq7LQvbw)
